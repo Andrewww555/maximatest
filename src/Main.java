@@ -1,18 +1,15 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        int myInt = 557;
-        short myShort = 3266;
-        long myLong = 24724824;
+        Bicycle bike = new Bicycle(2, 15.0, "Горный");
+        Car car = new Car(4, 220.0, "Бензиновый", "Toyota", "Camry");
+        Truck truck = new Truck(6, 100.0, "Дизельный", 5000.0);
 
-        double myDouble = 235.35;
-        float myFloat = 2362.4f;
+        visitServiceStation(bike);
+        visitServiceStation(car);
+        visitServiceStation(truck);
+    }
 
-        char c = 'a';
-        boolean b = true;
-
-        byte myByte = 100; // -128-127
-        System.out.println(myInt);
+    public static void visitServiceStation(WheeledTransport transport) {
+        transport.service();
     }
 }
